@@ -15,29 +15,17 @@ A CLI application to generate a readme boilerplate
 
 ## Description
 
-The Easepay User Management Service manages the user action and data accessible on the user dashboard. The user management service also communicates with the Auth service via a RESTful API gate way, and the email Service, via a Redis implementation of the AMQP
 
 ## Getting Started
 
 To get started, clone the project and install the dependencies.
 
-```sh
-github.com/easepay/user_management_service
-cd user_management_service
-npm install
-npm run start:dev
-```
 
 ## Prerequisites
 
 The following are required to Run the application in development
 
-- [Node.js](https://nodejs.org)
-- [PostgreSQL](https://www.postgresql.org)
-- [npm](https://www.npmjs.com/)
-- [Redis](https://redis.io)
-- [Easepay Auth Service](https://github.com/Easepay/easepay_auth_server)
-- [Easepay Email Service](https://github.com/Easepay/email_service/)
+
 
 ## Installation
 
@@ -53,8 +41,7 @@ Information on how to get help and support for the project, including contact de
 
 ## Documentation
 
-See https://easepay.github.io/user_management_service/
 
 ## License
 
-This project is proprietary software owned by [Easepay](https://easepay.io). Unauthorized use or distribution is strictly prohibited. For licensing inquiries, please contact [Easepay](https://easepay.io).
+
