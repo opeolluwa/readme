@@ -1,7 +1,7 @@
 # README
 
 Generate a README boilerplate for your project in 30ms!
-![image](./code.png)
+<!-- ![image](./code.png) -->
 
 - [Description](#description)
 - [Getting Started](#getting-started)
