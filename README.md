@@ -1,6 +1,6 @@
-# Title
+# README
 
-A Quick description of the project
+Generate a README boilerplate for your project in 30ms!
 
 - [Description](#description)
 - [Getting Started](#getting-started)
@@ -13,32 +13,37 @@ A Quick description of the project
 
 ## Getting Started
 
-To get started, clone the project and install the dependencies.
+To get started, clone the project and install the [Deno](https://deno.land)
 
 ## Prerequisites
 
-To run the application in a development environment, you'll need the following prerequisites:
+The application only require [Deno](https://deno.land) to run locally
 
-- [List of prerequisites here, such as programming languages, frameworks, libraries, and tools]
-- [Any specific version requirements]
-- [Any external services or dependencies]
-
-Make sure you have these prerequisites installed and set up before proceeding with the installation and usage of the application.
+Make sure you have it installed and set up before proceeding with the installation and usage of the application.
 
 ## Installation
 
-Instructions on how to install and set up the project for deployment
+`deno task install` will install your CLI tool in `$HOME/.deno/bin` or a custom directory when you set the DENO_INSTALL_ROOT environment variable.
 
 ## Usage
- - to build the project locally run 
- ```sh 
- deno task dev
- ```
 
- - to install the binary 
- ```
- deno install --allow-sys --allow-read --allow-write main.ts
- ```
+- to run the project locally
+
+```sh
+deno task dev
+```
+
+- to build the project locally run
+
+```sh
+deno task build
+```
+
+- to install the binary
+
+```sh
+deno install --allow-sys --allow-read --allow-write main.ts
+```
 
 ## Support
 
@@ -50,4 +55,4 @@ Information on the software design, API documentation, etc
 
 ## License
 
-The License and the License' limitation
+The project is distributed under [ GNU GENERAL PUBLIC LICENSE](./LICENSE)
