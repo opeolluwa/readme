@@ -40,3 +40,11 @@ jobs:
 
       - name: Run tests
         run: deno test -A
+
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-22.04, macos-12, windows-2022 ]
+    steps:
+      - run: deno test --allow-all --coverage cov/
