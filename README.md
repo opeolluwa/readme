@@ -1,8 +1,6 @@
-# Simple Readme
+# Title
 
-A CLI application to generate a readme boilerplate
-
-## Table of Contents
+A Quick description of the project
 
 - [Description](#description)
 - [Getting Started](#getting-started)
@@ -13,19 +11,19 @@ A CLI application to generate a readme boilerplate
 - [Documentation](#documentation)
 - [License](#license)
 
-## Description
-
-
 ## Getting Started
 
 To get started, clone the project and install the dependencies.
 
-
 ## Prerequisites
 
-The following are required to Run the application in development
+To run the application in a development environment, you'll need the following prerequisites:
 
+- [List of prerequisites here, such as programming languages, frameworks, libraries, and tools]
+- [Any specific version requirements]
+- [Any external services or dependencies]
 
+Make sure you have these prerequisites installed and set up before proceeding with the installation and usage of the application.
 
 ## Installation
 
@@ -41,7 +39,8 @@ Information on how to get help and support for the project, including contact de
 
 ## Documentation
 
+Information on the software design, API documentation, etc
 
 ## License
 
-
+The License and the License' limitation
