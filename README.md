@@ -30,8 +30,15 @@ Make sure you have these prerequisites installed and set up before proceeding wi
 Instructions on how to install and set up the project for deployment
 
 ## Usage
+ - to build the project locally run 
+ ```sh 
+ deno task dev
+ ```
 
-See the `scripts` section of the package.json file for various available commands
+ - to install the binary 
+ ```
+ deno install --allow-sys --allow-read --allow-write main.ts
+ ```
 
 ## Support
 
