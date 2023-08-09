@@ -12,7 +12,7 @@ program
   .command("new")
   .description("create a new readme")
   .argument("<string>", "the project title")
-  .action(async (title: string = "Project Title") => {
+  .action(async (title = "Project Title") => {
     const readmeExists: boolean = existsSync("README.md", {
       isReadable: true,
       isFile: true,
