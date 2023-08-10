@@ -1,6 +1,7 @@
 # README
 
 Generate a README boilerplate for your project in 30ms!
+
 <!-- ![image](./code.png) -->
 
 - [Description](#description)
@@ -20,11 +21,13 @@ To get started, clone the project and install the [Deno](https://deno.land)
 
 The application only require [Deno](https://deno.land) to run locally
 
-Make sure you have it installed and set up before proceeding with the installation and usage of the application.
+Make sure you have it installed and set up before proceeding with the
+installation and usage of the application.
 
 ## Installation
 
-`deno task install` will install your CLI tool in `$HOME/.deno/bin` or a custom directory when you set the DENO_INSTALL_ROOT environment variable.
+`deno task install` will install your CLI tool in `$HOME/.deno/bin` or a custom
+directory when you set the DENO_INSTALL_ROOT environment variable.
 
 ## Usage
 
@@ -48,7 +51,8 @@ deno install --allow-sys --allow-read --allow-write main.ts
 
 ## Support
 
-Information on how to get help and support for the project, including contact details for your company's support team.
+Information on how to get help and support for the project, including contact
+details for your company's support team.
 
 ## Documentation
 
@@ -56,4 +60,4 @@ Information on the software design, API documentation, etc
 
 ## License
 
-The project is distributed under [ GNU GENERAL PUBLIC LICENSE](./LICENSE)
+The project is distributed under [GNU GENERAL PUBLIC LICENSE](./LICENSE)
