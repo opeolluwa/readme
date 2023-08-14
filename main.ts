@@ -1,5 +1,6 @@
 import { existsSync } from "https://deno.land/std@0.197.0/fs/mod.ts";
 import { Command } from "npm:commander@11";
+import { join } from "node:path";
 
 const program = new Command();
 
@@ -7,40 +8,42 @@ program
   .name("readme")
   .description("Create a README.md boilerplate for your project")
   .version("23.08") // august 2023
-  .option("-f, --force")
-  .option("-t, --title <string>")
-  .option("-d, --description <string>");
+  .option("-f, --force", "overwrite existing README")
+  .option("-b, --backup", "Backup existing README")
+  .option("-p, --path <string>", "Path to save the generated README")
+  .option("-t, --title <string>", "The project title")
+  .option("-d, --description <string>", "The project description");
 
 if (import.meta.main) {
   program.parse();
   const options = program.opts();
-  const readmeExists: boolean = existsSync("README.md", {
-    isReadable: true,
-    isFile: true,
-  });
+  const path = options?.path ? join(options.path, "README.md") : "./README.md";
 
   // overwrite existing readme
-  if (options.force && readmeExists) {
+  if (readmeExists(path) && options.backup) {
+    await Deno.rename(join(path), join(options?.path, "README.md.bak"));
+    await generateReadme(options.title, options.description);
+  } else if (options.force && readmeExists(path)) {
     Deno.removeSync("./README.md");
     await generateReadme(options.title, options.description);
   } else if (options.force && !readmeExists) {
     await generateReadme(options.title, options.description);
-  } else if (readmeExists) {
+  } else if (readmeExists(path)) {
     console.log("%cREADME already exist ❌", "color:#FFCCCC");
     Deno.exit(1); // quit the program if readme exists
   } else {
-    await generateReadme(options.title, options.description);
-    console.log("%cREADME successfully added ✅", "color:#E6FFCC");
+    await generateReadme(options.title, options.description, path);
   }
 }
 
 async function generateReadme(
   title = "Project Title",
   description = "Simple overview of use/purpose.",
+  path = "./README.md",
 ) {
   // create the readme otherwise
   await Deno.writeTextFile(
-    "./README.md",
+    path,
     `# ${
       title.replace(/(^\w{1})|(\s+\w{1})/g, (letter: string) =>
         letter.toUpperCase())
@@ -121,4 +124,15 @@ This project is licensed under the [NAME HERE] License - see the LICENSE.md file
 Inspiration, code snippets, etc.
 `,
   );
+  console.log("%cREADME successfully added ✅", "color:#E6FFCC");
+}
+
+// see if the file already in the provided directory
+function readmeExists(path: string): boolean {
+  const fileExistInPath = existsSync(path.trim(), {
+    isReadable: true,
+    isFile: true,
+  });
+
+  return fileExistInPath;
 }
